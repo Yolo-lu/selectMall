@@ -1,0 +1,11 @@
+<view class="brandList">
+<view wx:for="{{brandList}}" wx:key="index" class="list">
+<view>
+<image src="{{item.new_pic_url}}" class="b-img"></image>
+</view>
+<view class="info">
+<view class="name">{{item.name}}</view>
+<view class="price">{{item.floor_price}}元起</view>
+</view>
+</view>
+</view>

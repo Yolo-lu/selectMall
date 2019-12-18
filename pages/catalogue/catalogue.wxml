@@ -1,0 +1,35 @@
+<view class="all">
+  <view>
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" />
+  </view>
+</view>
+<view style="display:flex">
+  <view class="left">
+    <van-sidebar active-key="{{ active }}" bind:change="onChange">
+      <view wx:for="{{categoryList}}" wx:key="index">
+        <van-sidebar-item title="{{item.name}}" bindtap="choose" data-item="{{item.id}}" />
+      </view>
+    </van-sidebar>
+  </view>
+  <view class="right">
+    <view>
+      <view>
+        <image src="{{currentOne.wap_banner_url}}" class="c-img"></image>
+      </view>
+      <view class="desc">{{currentOne.front_name}}</view>
+    </view>
+    <view class="break">
+      <view class="line"></view>
+      <view>{{currentOne.name}}分类</view>
+      <view class="line"></view>
+    </view>
+ <view class="catalogue">
+    <view wx:for="{{currentOne.subList}}" wx:key="index" class="subList" bindtap="skip" data-item="{{item.id}}" data-name="{{item.name}}">
+      <view>
+      <image src="{{item.wap_banner_url}}" class="list-img"></image>
+      </view>
+      <view class="name">{{item.name}}</view>
+    </view>
+ </view>
+  </view>
+</view>

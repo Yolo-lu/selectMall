@@ -1,0 +1,8 @@
+<view class="channel">
+<view wx:for="{{channel}}" wx:key="index">
+<view class="item" bindtap="skip" data-item="{{item.id}}" data-name="{{item.name}}">
+  <view><image src="{{item.icon_url}}" class="c-img"></image></view>
+  <view>{{item.name}}</view>
+</view>
+</view>
+</view>

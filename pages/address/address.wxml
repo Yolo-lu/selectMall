@@ -1,0 +1,31 @@
+<view class="address" wx:if="{{data.length===0}}">
+  <view style="margin-left:30rpx">暂无收货地址</view>
+  <view style="margin-right:30rpx">
+    <van-icon name="arrow" />
+  </view>
+</view>
+<view wx:if="{{data.length>0}}">
+  <view wx:for="{{data}}" wx:key="index">
+    <van-swipe-cell right-width="{{ 65 }}">
+      <view class="list add" bindtap="choose" data-index="{{index}}" data-item="{{item}}">
+        <view class="left">
+          <view>{{item.name}}</view>
+          <view wx:if="{{item.is_default===1}}" class="defalt">默认</view>
+        </view>
+        <view class="center">
+          <view>{{item.mobile}}</view>
+          <view class="brief" style="text-align:left;font-size:30rpx;margin-top: 20rpx">{{item.address}} {{item.address_detail}}</view>
+        </view>
+        <view class="right" bindtap="edit" data-item="{{item}}">
+          <van-icon name="edit" />
+        </view>
+
+      </view>
+      <view slot="right" class="del" bindtap="delete" data-index="{{index}}">删除</view>
+    </van-swipe-cell>
+  </view>
+</view>
+<view class="bottom">
+  <view class="left1" bindtap="addressEdit">+新建地址</view>
+  <view class="right1">一键导入微信地址</view>
+</view>

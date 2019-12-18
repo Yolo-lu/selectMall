@@ -1,0 +1,13 @@
+<scroll-view class="scroll-view_H" scroll-x="true"style="width: 100%">
+  <view class="newGoods">
+    <view wx:for="{{Goods}}" wx:key="index">
+      <view class="item" bindtap="skip" data-id="{{item.id}}">
+      <view>
+        <image src="{{item.list_pic_url}}" class="n-img"></image>
+      </view>
+      <view class="name">{{item.name}}</view>
+      <view class="brief">{{item.goods_brief}}</view>
+      <view class="price">￥{{item.retail_price}}</view></view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,15 @@
+/* pages/subject/subject.wxss */
+@import "/app.wxss";
+.s-img{
+  width: 100%;
+  display: block
+}
+.info{
+  text-align: center;
+  margin: 20rpx 0
+}
+.footer{
+  margin: 60rpx;
+  color: #666;
+  text-align: center
+}

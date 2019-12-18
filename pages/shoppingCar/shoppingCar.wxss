@@ -1,0 +1,90 @@
+/* pages/shoppingCar/shoppingCar.wxss */
+@import "/app.wxss";
+.title{
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx
+}
+.t-img{
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+  position: relative;
+  top: 40rpx
+}
+.t-name{
+  font-size: 28rpx;
+  color: #666
+}
+.van-checkbox{
+  margin-left: 20rpx
+}
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff
+}
+.choose{
+  position: relative;
+  top: 30rpx
+}
+.prices{
+  font-size: 36rpx;
+  color: #f45;
+  position: relative;
+  left: 100rpx
+}
+.order{
+background: #f45;
+color: #fff;
+width: 200rpx;
+text-align: center
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  background: #fff
+}
+.left{
+  display: flex
+}
+.s-img{
+  display: block;
+  width: 200rpx;
+  height: 200rpx
+}
+.info{
+  margin-top: 50rpx
+}
+.infos{
+  margin-top: 80rpx
+}
+.right{
+  margin: 70rpx 20rpx
+}
+.num{
+  position: relative;
+  top: -6rpx
+}
+.del{
+  background: #B4282D;
+  color: #fff;
+  height: 100%;
+  padding:20rpx 35rpx;
+  line-height: 150rpx
+}
+.p-list{
+  position: fixed;
+  top: 100rpx;
+  bottom: 100rpx;
+  left: 0;
+  right: 0
+}
+

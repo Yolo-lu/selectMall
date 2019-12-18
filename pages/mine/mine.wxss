@@ -1,0 +1,54 @@
+/* pages/mine/mine.wxss */
+@import "/app.wxss";
+.list{
+  display: flex;
+  flex-wrap: wrap
+}
+.one{
+  width: 33%;
+  border-right: 3rpx solid #999;
+  border-bottom: 3rpx solid #999;
+  text-align: center;
+  height: 160rpx;
+  padding-top: 30rpx
+}
+.boder{
+  border-right: 0;
+}
+.user{
+  height: 200rpx;
+  background: #B4282D;
+  display: flex;
+  justify-content: space-between;
+  color: #fff
+}
+.username{
+  position: relative;
+  top: 80rpx;
+  left: -150rpx
+}
+.log{
+  background: #B4282D;
+  color: #fff;
+  position: relative;
+  left: -30rpx;
+  top: 70rpx;
+  width: 200rpx !important;
+  padding: 10rpx!important;
+}
+.left{
+  display: flex;
+  line-height: 200rpx;
+  font-size: 34rpx
+}
+.u-img{
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin: 35rpx;
+}
+.right{
+  line-height: 200rpx;
+  margin-right: 30rpx
+}

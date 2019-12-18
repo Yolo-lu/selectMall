@@ -1,0 +1,42 @@
+<view wx:if="{{flag}}">
+  <view class="head">
+    <view class="location" bindtap="address">{{address}}</view>
+    <view style="width:70%">
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" bind:focus="search" />
+    </view>
+  </view>
+  <banner banner="{{data.banner}}"></banner>
+  <view class="all">
+    <channel channel="{{data.channel}}"></channel>
+    <view class="brandList">品牌制造商直供</view>
+    <brandList brandList="{{data.brandList}}"></brandList>
+  </view>
+  <view class="new">
+    <view class="content" bindtap="skipNew" data-type="0">
+      <view class="newBrond">新品首发</view>
+      <view class="more">查看更多</view>
+    </view>
+  </view>
+  <view class="all">
+    <newGoods Goods="{{data.newGoods}}"></newGoods>
+  </view>
+  <view class="news">
+    <view class="contents" bindtap="skipNew" data-type="1">
+      <view class="newBrond">人气推荐.好物精选</view>
+      <view class="mores">查看更多</view>
+    </view>
+  </view>
+  <view class="all">
+    <newGoods Goods="{{data.hotGoods}}"></newGoods>
+    <view class="brandList" style="margin-top:40rpx">专题精选</view>
+    <topicList topicList="{{data.topicList}}"></topicList>
+  </view>
+  <view style="background:#eee">
+    <view class="all">
+      <goodsList goodsList="{{data.newCategoryList}}"></goodsList>
+    </view>
+  </view>
+</view>
+<view wx:if="{{!flag}}">
+<search bind:flag="flag"></search>
+</view>

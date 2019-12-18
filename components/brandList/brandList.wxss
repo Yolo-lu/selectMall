@@ -1,0 +1,26 @@
+/* components/brandList/brandList.wxss */
+@import "/app.wxss";
+.b-img{
+  display: block;
+ height: 270rpx;
+ width: 100%
+}
+.brandList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+.list{
+  width: 48%;
+  margin: 1%;
+  position: relative
+}
+.info{
+position: absolute;
+top: 20rpx;
+left: 20rpx
+}
+.price{
+  font-size: 26rpx;
+  color: #999
+}

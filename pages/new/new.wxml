@@ -1,0 +1,31 @@
+<view>
+  <view>
+    <image src="../../images/timg.jpg" class="h-img"></image>
+  </view>
+  <view class="head">
+    <view bindtap="comprehensive" class="{{active===0?'red':''}}">综合</view>
+    <view style="display:flex" bindtap="price">
+      <view style="line-height:100rpx" class="{{active===1?'red':''}}" >价格</view>
+      <view class="icons">
+        <view catchtap="order" class="{{active===1&&up?'red':''}}">
+          <van-icon name="arrow-up" class="icon" />
+        </view>
+        <view catchtap="order" class="{{active===1&&!up?'red':''}}">
+          <van-icon name="arrow-down" class="icon" />
+        </view>
+      </view>
+    </view>
+    <view bindtap="classify" class="{{active===2?'red':''}}">分类</view>
+  </view>
+ <view class="goodsList whole">
+  <view wx:for="{{data}}" wx:key="index" class="item" bindtap="skip" data-id="{{item.id}}">
+      <view>
+        <image src="{{item.list_pic_url}}" class="g-img"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="price">￥{{item.retail_price}}</view>
+      </view>
+  </view>
+ </view>
+</view>

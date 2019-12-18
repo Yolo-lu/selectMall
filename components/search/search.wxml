@@ -1,0 +1,32 @@
+<view class="head">
+  <view class="input">
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" bind:change="search" />
+  </view>
+  <view bindtap="cancel" data-flag="true">取消</view>
+</view>
+<view class="all">
+  <view wx:if="{{hotFlag}}">
+<view wx:if="{{data.historyData.length>0}}">
+ <view class="history">
+  <view class="hot">搜索历史</view>
+  <view class="icon" bindtap="clear"><van-icon name="delete" /></view>
+ </view>
+    <view class="hotword">
+      <view wx:for="{{data.historyData}}" wx:key="index">
+        <view class="keyword" bindtap="skip" data-name="{{item.keyword}}" data-id="{{item.id}}">{{item.keyword}}</view>
+      </view>
+    </view>
+</view>
+    <view class="hot">热门搜索</view>
+    <view class="hotword">
+      <view wx:for="{{data.hotKeywordList}}" wx:key="index">
+        <view class="keyword {{item.is_hot===1?'red':''}}" bindtap="choosed" data-name="{{item.keyword}}">{{item.keyword}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!hotFlag}}">
+<view wx:for="{{keywords}}" wx:key="index" class="keywords">
+<view bindtap="choose" data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</view>
+</view>
+  </view>
+</view>

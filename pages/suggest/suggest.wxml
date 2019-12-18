@@ -1,0 +1,12 @@
+<view class="all">
+  <view class="suggest">意见与反馈</view>
+  <view class="suggests">
+    <textarea placeholder="请填写你的意见和反馈">
+      <view class="num">0/150</view>
+    </textarea>
+  </view>
+  <view class="suggest">
+  <input placeholder="联系方式：手机/邮箱/微信号"></input>
+  </view>
+</view>
+<view style="margin:100rpx 0"><view class="submit">提交</view></view>

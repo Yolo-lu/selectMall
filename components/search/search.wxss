@@ -1,0 +1,43 @@
+/* components/search/search.wxss */
+@import "/app.wxss";
+.head{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  justify-content: space-between;
+  margin: 0 30rpx
+}
+.input{
+  width: 90%
+}
+.hotword{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.hot{
+  margin: 20rpx 0
+}
+.keyword{
+  margin: 10rpx;
+  padding: 10rpx;
+  border: 1rpx solid #666;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}
+.red{
+  border: 1rpx solid red;
+  color: red
+}
+.keywords{
+  margin: 30rpx 0;
+  color: #333
+}
+.history{
+  display: flex;
+  justify-content: space-between
+}
+.icon{
+  position: relative;
+  top: 15rpx
+}

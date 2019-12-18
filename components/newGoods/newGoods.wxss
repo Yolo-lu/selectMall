@@ -1,0 +1,16 @@
+/* components/newGoods/newGoods.wxss */
+@import "/app.wxss";
+.newGoods{
+  display: flex
+}
+.n-img{
+  display: block;
+  width: 250rpx;
+  height: 250rpx
+}
+.item{
+  width: 250rpx;
+  margin: 0 20rpx
+  
+}
+

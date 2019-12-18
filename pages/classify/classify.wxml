@@ -1,0 +1,28 @@
+<view class="bg">
+  <scroll-view class="scroll-view_H" scroll-x="true"style="width: 100%">
+  <view class="tab">
+    <view wx:for="{{navData}}" wx:key="index">
+      <view class="names {{name===item.name?'red':''}}" bindtap="change" data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+  </view>
+</scroll-view>
+  <view class="bgcolor">
+    <view class="info">
+      <view class="name">{{data.currentNav.name}}</view>
+      <view class="brief">{{data.currentNav.front_desc}}</view>
+    </view>
+    <view class="c-list">
+      <view wx:for="{{data.data}}" wx:key="index" class="list" bindtap="skip" data-id="{{item.id}}">
+        <view>
+          <view>
+            <image src="{{item.list_pic_url}}" class="list-img"></image>
+          </view>
+          <view style="text-align:center;margin:10rpx 0;">
+            <view>{{item.name}}</view>
+            <view class="price">{{item.retail_price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view>
+  <view class="input" >
+    <input placeholder="姓名" bindinput="changeName" data-value="username" value="{{username}}"></input>
+  </view>
+  <view class="input" >
+    <input placeholder="手机号码" bindinput="changeName" data-value="tel" value="{{tel}}"></input>
+  </view>
+  <view class="input">
+    <input placeholder="省份、城市、区县" bind:focus="changeCity" value="{{address}}"></input>
+    <van-popup show="{{ showcity }}" position="bottom" custom-style="height: 50%;">
+      <van-area area-list="{{ areaList }}" bind:confirm="confirmCity" bind:cancel="cancelCity" />
+    </van-popup>
+  </view>
+  <view class="input" >
+    <input placeholder="详细地址，如街道、楼盘号等" bindinput="changeName" data-value="address" value="{{detailAddress}}"></input>
+  </view>
+  <view class="all address">
+    <van-checkbox value="{{ checked }}" checked-color="#07c160" shape="square" bind:change="onChange">
+      设置为默认地址
+    </van-checkbox>
+    <view class="green">一键导入微信地址></view>
+  </view>
+</view>
+<view class="bottom" bindtap="save">
+  保存
+</view>

@@ -1,0 +1,10 @@
+<view wx:for="{{data}}" wx:key="index" bindtap="skip" data-id="{{item.id}}">
+  <view>
+    <image src="{{item.scene_pic_url}}" class="s-img"></image>
+    <view class="info">
+      <view class="name">{{item.title}}</view>
+      <view class="brief">{{item.subtitle}}</view>
+      <view class="price">{{item.price_info}}起</view>
+    </view>
+  </view>
+</view>

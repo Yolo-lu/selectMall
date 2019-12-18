@@ -1,0 +1,17 @@
+/* components/topicList/topicList.wxss */
+@import "/app.wxss";
+.newGoods{
+display: flex
+}
+.scroll-view_H{
+  margin: 20rpx 0
+}
+.item{
+margin: 10rpx;
+width: 600rpx
+}
+.t-img{
+  width: 600rpx;
+  height: 350rpx;
+  display: block
+}

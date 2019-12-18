@@ -1,0 +1,15 @@
+<view class="whole">
+<view>
+  <import src="../../lib/wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  
+</view>
+<view wx:for="{{data.recommendList}}" wx:key="index" class="list">
+  <view>
+    <image src="{{item.scene_pic_url}}" class="s-img"></image>
+    <view class="info">
+      <view class="name">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+</view>

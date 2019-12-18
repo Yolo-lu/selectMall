@@ -1,0 +1,15 @@
+
+<view class="wholes">
+  <view class="head">我的收藏</view>
+  <view class="goodsList">
+    <view wx:for="{{collectGoodsList}}" wx:key="index" class="item" bindtap="skip" data-id="{{item.id}}">
+      <view>
+        <image src="{{item.list_pic_url}}" class="g-img"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="price">￥{{item.retail_price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.name{
+  font-size: 28rpx;
+   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.brief{
+  font-size: 26rpx;
+  color: #999;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.price{
+  font-size: 26rpx;
+  color: #f45
+}
+.all{
+  width: 95%;
+  margin: auto;
+}
+.wholes{
+  background: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0
+}
+.whole{
+  background: #eee;
+}
+.line{
+    background: #ddd;
+  width: 80rpx;
+  height: 4rpx;
+  margin: 0 10rpx
+}

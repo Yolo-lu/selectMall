@@ -1,0 +1,19 @@
+<view class="user">
+  <view class="left">
+    <view>
+      <image src="../../images/avatar.png" class="u-img" wx:if="{{!user}}"></image>
+      <image src="{{user.avatarUrl}}" class="u-img" wx:if="{{user}}"></image>
+    </view>
+    <view wx:if="{{!user}}"><button class="log" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点击登录</button></view>
+  </view>
+  <view wx:if="{{user}}" class="username">{{user.nickName}}</view>
+  <view class="right">
+  <van-icon name="arrow" size="50rpx"/>
+  </view>
+</view>
+<view class="list">
+  <view wx:for="{{list}}" wx:key="index" class="one {{(index+1)%3===0?'boder':''}}" bindtap="skip" data-path="{{item.path}}">
+    <van-icon name="{{item.icon}}" color="#999" size="70rpx" />
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>

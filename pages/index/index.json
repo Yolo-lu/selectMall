@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "banner": "../../components/banner/banner",
+    "channel": "../../components/channel/channel",
+    "brandList": "../../components/brandList/brandList",
+    "newGoods": "../../components/newGoods/newGoods",
+    "topicList": "../../components/topicList/topicList",
+    "goodsList": "../../components/goodsList/goodsList",
+    "search": "../../components/search/search"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/subject/subject",
+    "pages/subjectDetail/subjectDetail",
+    "pages/catalogue/catalogue",
+    "pages/classify/classify",
+    "pages/shoppingCar/shoppingCar",
+    "pages/mine/mine",
+    "pages/new/new",
+    "pages/goodDetail/goodDetail",
+    "pages/homeCatalogue/homeCatalogue",
+    "pages/pay/pay",
+    "pages/address/address",
+    "pages/addressEdit/addressEdit",
+    "pages/suggest/suggest",
+    "pages/collection/collection",
+    "pages/location/location"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B4282D",
+    "navigationBarTitleText": "严选商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#C20C0C",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/subject/subject",
+        "text": "专题",
+        "iconPath": "images/subject.png",
+        "selectedIconPath": "images/subject1.png"
+      },
+      {
+        "pagePath": "pages/catalogue/catalogue",
+        "text": "分类",
+        "iconPath": "images/classify.png",
+        "selectedIconPath": "images/classify1.png"
+      },
+      {
+        "pagePath": "pages/shoppingCar/shoppingCar",
+        "text": "购物车 ",
+        "iconPath": "images/shoppingcar.png",
+        "selectedIconPath": "images/shoppingcar1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine1.png"
+      }
+    ]
+  },
+    "usingComponents": {
+      "van-search": "lib/vant/search/index",
+      "van-tab": "/lib/vant/tab/index",
+      "van-tabs": "/lib/vant/tabs/index",
+      "van-icon": "/lib/vant/icon/index",
+      "van-popup": "/lib/vant/popup/index",
+       "van-sidebar": "lib/vant/sidebar/index",
+    "van-sidebar-item": "lib/vant/sidebar-item/index",
+    "van-checkbox": "lib/vant/checkbox/index",
+    "van-checkbox-group": "lib/vant/checkbox-group/index",
+"van-stepper": "lib/vant/stepper/index",
+"van-swipe-cell": "lib/vant/swipe-cell/index",
+"van-area": "lib/vant/area/index"
+    },
+  "sitemapLocation": "sitemap.json"
+}

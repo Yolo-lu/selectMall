@@ -1,0 +1,25 @@
+/* pages/suggest/suggest.wxss */
+@import "/app.wxss";
+.suggest{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #e3e3e3
+}
+.suggests{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+   position: relative;
+}
+.num{
+ position: absolute;
+ bottom: 20rpx;
+ right: 0;
+ color: #666
+}
+.submit{
+  width: 60%;
+  margin: auto;
+  background: #B4282D;
+  color: #fff;
+  text-align: center;
+  padding: 30rpx 0           
+}

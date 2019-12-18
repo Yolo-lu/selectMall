@@ -1,0 +1,62 @@
+/* pages/address/address.wxss */
+@import "/app.wxss";
+.address{
+  height: 170rpx;
+  background: #fff;
+  line-height: 170rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #e2e2e2
+}
+.add{
+   height: 100rpx;
+  border-bottom: 2rpx solid #e2e2e2;
+  padding: 20rpx
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-around
+}
+.left1{
+  border:1rpx solid red;
+  color: red;
+  padding: 0 10rpx;
+}
+.right1{
+  border: 1rpx solid green;
+  color: green;
+  padding: 0 10rpx;
+}
+.del{
+  background: #B4282D;
+  color: #fff;
+  height: 100%;
+  padding:5rpx 35rpx;
+  line-height: 100rpx
+}
+.list{
+  display: flex;
+  justify-content: space-between
+}
+.left{
+  width: 10%
+}
+.center{
+  width: 70%
+}
+.right{
+  width: 10%
+}
+.defalt{
+  border: 1rpx solid red;
+  font-size: 28rpx;
+  color: red;
+  text-align: center;
+  margin-top: 20rpx
+}

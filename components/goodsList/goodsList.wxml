@@ -1,0 +1,23 @@
+<view wx:for="{{goodsList}}" wx:key="index">
+  <view class="brandList">{{item.name}}</view>
+  <view class="goodsList">
+    <view wx:for="{{item.goodsList}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1" class="item" bindtap="skip" data-id="{{item1.id}}">
+      <view>
+        <image src="{{item1.list_pic_url}}" class="g-img"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{item1.name}}</view>
+        <view class="price">￥{{item1.retail_price}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="g-info">
+        <view class="g-name">{{item.name}}</view>
+        <view class="icon">
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

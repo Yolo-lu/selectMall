@@ -1,0 +1,123 @@
+<view wx:if="{{data.gallery.length>0}}">
+<swiper indicator-dots="{{indicatorDots}} " indicator-active-color="#C20C0C" style="height:700rpx" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular>
+  <block wx:for="{{data.gallery}}" wx:key="*this">
+    <swiper-item>
+      <image style="display:block;width:100%;" src="{{item.img_url}}" class="height" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view wx:else style="height:500rpx;width:100%">
+<image src="{{data.info.list_pic_url}}" style="display:block"></image>
+</view>
+<view class="title">
+  <view wx:for="{{list}}" wx:key="index">
+    <view class="t-list">
+      <view>
+        <image src="{{item.img}}" class="t-img"></image>
+      </view>
+      <view class="t-name">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="info">
+  <view class="infoName">{{data.info.name}}</view>
+  <view class="infoBrief">{{data.info.goods_brief}}</view>
+  <view class="infoPrice">￥{{data.info.retail_price}}</view>
+</view>
+<view class="all please" bindtap="shows">
+  <view>请选择规格数量</view>
+  <van-icon name="arrow" />
+</view>
+<view class="split"></view>
+<view class="all">
+  <view class="product">商品参数</view>
+  <view class="attribute" wx:for="{{data.attribute}}" wx:key="index">
+    <view class="detail" style="width:170rpx;text-align:left">{{item.name}}</view>
+    <view class="value">{{item.value}}</view>
+  </view>
+</view>
+<view class="gallery">
+  <import src="../../lib/wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="data">
+  <view class="line"></view>
+  <view class="d-name">常见问题</view>
+  <view class="line"></view>
+</view>
+<view class="issue">
+  <view wx:for="{{data.issue}}" wx:key="index" class="all i-list">
+    <view style="display:flex">
+      <view class="circle"></view>
+      <view>{{item.question}}</view>
+    </view>
+    <view class="detail" style="text-align:left">{{item.answer}}</view>
+  </view>
+</view>
+<view class="data" style="margin-top:40rpx">
+  <view class="line"></view>
+  <view class="d-name">大家都在看</view>
+  <view class="line"></view>
+</view>
+<view class="c-list">
+  <view wx:for="{{data.productList}}" wx:key="index" class="list" bindtap="skip" data-id="{{item.id}}">
+    <view>
+      <view>
+        <image src="{{item.list_pic_url}}" class="list-img"></image>
+      </view>
+      <view style="text-align:center;margin:10rpx 0;">
+        <view>{{item.name}}</view>
+        <view class="price">{{item.retail_price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <view style="display:flex">
+    <view bindtap="collect" style="width:120rpx">
+      <view style="text-align:center">
+        <view wx:if="{{!collected}}">
+          <van-icon name="like-o" size="40rpx" />
+        </view>
+        <view wx:else>
+          <van-icon name="like" color="red" size="40rpx" />
+        </view>
+      </view>
+      <view class="detail" wx:if="{{!collected}}">收藏</view>
+      <view class="detail" wx:else>取消收藏</view>
+    </view>
+    <view style="width:120rpx" bindtap="shopping">
+      <view style="text-align:center;margin-left:20rpx" wx:if="{{number>0}}">
+        <van-icon name="cart-o" size="40rpx" info="{{number}}" />
+      </view>
+      <view style="text-align:center;margin-left:20rpx" wx:else>
+        <van-icon name="cart-o" size="40rpx" />
+      </view>
+      <view class="detail" style="text-align:center;margin-left:20rpx">购物车</view>
+    </view>
+  </view>
+  <view style="display:flex">
+    <view class="car" bindtap="shoppingcar">加入购物车</view>
+    <view class="buy" bindtap="buy">立即购买</view>
+  </view>
+</view>
+<view style="height:80rpx"></view>
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose">
+  <view>
+    <view class="show">
+      <image src="{{data.info.primary_pic_url}}" class="s-img"></image>
+      <view class="right">
+        <view style="color:#f45">价格￥{{data.info.retail_price}}</view>
+        <view>请选择数量</view>
+      </view>
+      <view class="icon" bindtap="onClose">
+        <van-icon name="cross" size="40rpx" />
+      </view>
+    </view>
+    <view class="count">
+      <view style="margin:20rpx 0">数量</view>
+      <van-stepper value="{{ value }}" bind:change="onChange" input-width="100rpx" button-size="85rpx" />
+    </view>
+  </view>
+</van-popup>

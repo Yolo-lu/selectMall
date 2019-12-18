@@ -1,0 +1,11 @@
+/* components/channel/channel.wxss */
+.channel{
+  display: flex;
+  justify-content: space-between;
+  margin: 35rpx 20rpx
+}
+.c-img{
+  display: block;
+  width: 60rpx;
+  height: 60rpx; 
+}

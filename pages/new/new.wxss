@@ -1,0 +1,56 @@
+/* pages/new/new.wxss */
+@import "/app.wxss";
+.h-img{
+  display: block;
+  width: 100%;
+  height: 300rpx
+}
+.head{
+  display: flex;
+  justify-content: space-around;
+  height: 100rpx;
+  align-items: center
+}
+.icon{
+  display: block;
+  height: 32rpx
+}
+.icons{
+  position: relative;
+  top: 17rpx;
+  margin-left: 10rpx
+}
+
+.goodsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+.item{
+ margin: 2%;
+  background: #fff;
+  width: 46%
+}
+.g-img{
+  display: block;
+  width: 300rpx;
+  height: 300rpx
+}
+.info{
+  text-align: center
+}
+.g-info{
+  display: flex;
+  position: relative;
+  top: 150rpx;
+  left: 130rpx
+}
+.iconss{
+  border:4rpx solid #ddd;
+  border-radius: 50%;
+  margin: 0 10rpx;
+  padding-left: 6rpx
+}
+.red{
+  color: #f45
+}

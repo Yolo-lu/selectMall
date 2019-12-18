@@ -1,0 +1,27 @@
+/* pages/collection/collection.wxss */
+@import "/app.wxss";
+.head{
+  font-size: 40rpx;
+  text-align: center;
+  padding: 40rpx 0;
+  font-weight: bold;
+  background: #fff
+}
+.goodsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+.item{
+ margin: 2%;
+  background: #fff;
+  width: 46%
+}
+.g-img{
+  display: block;
+  width: 98%;
+  height: 280rpx
+}
+.info{
+  padding: 20rpx
+}
